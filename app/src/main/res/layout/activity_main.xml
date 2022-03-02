@@ -10,7 +10,8 @@
     <RelativeLayout
         android:id="@+id/main_top_layout"
         android:layout_width="match_parent"
-        android:layout_height="50dp">
+        android:layout_height="50dp"
+        android:background="@color/teal_700">
 
         <ImageView
             android:id="@+id/icon"
@@ -29,7 +30,7 @@
             android:gravity="center"
             android:padding="15dp"
             android:text="@string/app_name"
-            android:textColor="#FF000000"
+            android:textColor="@color/white"
             android:textSize="15sp"
             android:textStyle="bold" />
     </RelativeLayout>
@@ -45,28 +46,26 @@
         android:padding="10dp"
         android:scrollbars="none">
 
-
     </ListView>
     <ImageButton
-        android:id="@+id/main_btn_more"
+        android:id="@+id/main_config_btn"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:src="@mipmap/more"
         android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
         android:layout_margin="20dp"
-        android:background="@drawable/main_morebtn_bg"/>
+        android:background="@drawable/main_config_btn_bg"/>
 
     <Button
-        android:id="@+id/main_btn_edit"
-        android:layout_width="100dp"
+        android:id="@+id/main_record_btn"
+        android:layout_width="50dp"
         android:layout_height="50dp"
-        android:layout_alignBottom="@id/main_btn_more"
-        android:background="@drawable/main_recordbtn_bg"
-        android:layout_toLeftOf="@id/main_btn_more"
-        android:text="@string/editone"
-        android:textStyle="bold"
-        android:textColor="@color/white"
+        android:layout_alignBottom="@id/main_config_btn"
+        android:layout_toLeftOf="@id/main_config_btn"
+        android:background="@drawable/main_record_btn_bg"
         android:drawableLeft="@mipmap/edit"
-        android:gravity="center_vertical"/>
+        android:gravity="center_vertical"
+        android:textColor="@color/white"
+        android:textStyle="bold" />
 </RelativeLayout>

@@ -3,7 +3,12 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/accounting system/app/src/main/res/drawable/ic_launcher_background.xml" value="0.2925" />
+        <entry key="..\:/accounting system/app/src/main/res/drawable/main_configbtn_bg.xml" value="0.2925" />
+        <entry key="..\:/accounting system/app/src/main/res/drawable/main_recordbtn.xml" value="0.2925" />
         <entry key="..\:/accounting system/app/src/main/res/layout/activity_main.xml" value="0.37395833333333334" />
+        <entry key="..\:/accounting system/app/src/main/res/layout/item_main.xml" value="0.28854166666666664" />
+        <entry key="..\:/accounting system/app/src/main/res/layout/item_main_top.xml" value="0.28854166666666664" />
       </map>
     </option>
   </component>

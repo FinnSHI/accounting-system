@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Accounting System</string>
+    <string name="month_out">本月支出</string>
+    <string name="out">支出</string>
+    <string name="month_in">本月收入</string>
+    <string name="in">收入</string>
+    <string name="budget">预算剩余</string>
 </resources>
