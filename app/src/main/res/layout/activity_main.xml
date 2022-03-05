@@ -11,7 +11,7 @@
         android:id="@+id/main_top_layout"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:background="@color/teal_700">
+        android:background="@color/blue_DDE4EE">
 
         <ImageView
             android:id="@+id/icon"
@@ -19,7 +19,7 @@
             android:layout_height="match_parent"
             android:layout_alignParentLeft="true"
             android:padding="10dp"
-            android:src="@mipmap/appicon" />
+            android:src="@mipmap/applogo" />
 
         <TextView
             android:id="@+id/app"
@@ -30,7 +30,7 @@
             android:gravity="center"
             android:padding="15dp"
             android:text="@string/app_name"
-            android:textColor="@color/white"
+            android:textColor="@color/black_coffee"
             android:textSize="15sp"
             android:textStyle="bold" />
     </RelativeLayout>
@@ -65,7 +65,5 @@
         android:layout_toLeftOf="@id/main_config_btn"
         android:background="@drawable/main_record_btn_bg"
         android:drawableLeft="@mipmap/edit"
-        android:gravity="center_vertical"
-        android:textColor="@color/white"
-        android:textStyle="bold" />
+        android:gravity="center_vertical" />
 </RelativeLayout>
