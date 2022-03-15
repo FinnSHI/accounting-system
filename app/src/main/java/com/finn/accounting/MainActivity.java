@@ -90,8 +90,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         if (budget == 0) {
             topRemainTextView.setText("HK$ 0");
         }else{
-            float syMoney = budget - spendOneMonth;
-            topRemainTextView.setText("￥"+syMoney);
+            float remain = budget - spendOneMonth;
+            topRemainTextView.setText("HK$" + remain);
         }
     }
 
