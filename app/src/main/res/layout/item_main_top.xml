@@ -11,16 +11,16 @@
         android:padding="20dp">
 
         <TextView
-            android:id="@+id/item_mainlv_top_tv1"
+            android:id="@+id/item_main_top_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/month_out" />
 
         <TextView
-            android:id="@+id/item_mainlv_top_tv_out"
+            android:id="@+id/item_main_top_spend"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/item_mainlv_top_tv1"
+            android:layout_below="@id/item_main_top_title"
             android:layout_marginTop="10dp"
             android:layout_marginBottom="10dp"
             android:text="HK$ 0"
@@ -29,36 +29,36 @@
             android:textStyle="bold" />
 
         <ImageView
-            android:id="@+id/item_mainlv_top_iv_hide"
+            android:id="@+id/item_main_top_img"
             android:layout_width="74dp"
             android:layout_height="68dp"
-            android:layout_alignTop="@id/item_mainlv_top_tv_out"
+            android:layout_alignTop="@id/item_main_top_spend"
             android:layout_alignParentRight="true"
             android:layout_marginTop="-38dp"
             android:layout_marginRight="9dp"
             android:src="@mipmap/note" />
 
         <TextView
-            android:id="@+id/item_mainlv_top_tv2"
+            android:id="@+id/item_main_top_remaining"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/item_mainlv_top_tv_out"
+            android:layout_below="@id/item_main_top_img"
             android:text="@string/month_in" />
 
         <TextView
-            android:id="@+id/item_mainlv_top_tv_in"
+            android:id="@+id/item_main_top_remaining_money"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/item_mainlv_top_tv_out"
+            android:layout_below="@id/item_main_top_img"
             android:layout_marginLeft="5dp"
-            android:layout_toRightOf="@id/item_mainlv_top_tv2"
+            android:layout_toRightOf="@id/item_main_top_remaining"
             android:text="HK$ 0"
             android:textColor="@color/black" />
 
     </RelativeLayout>
 
     <TextView
-        android:id="@+id/item_mainlv_top_tv_day"
+        android:id="@+id/item_main_top_today_spend"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="10dp"

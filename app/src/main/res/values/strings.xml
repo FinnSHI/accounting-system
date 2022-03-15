@@ -1,10 +1,13 @@
 <resources>
     <string name="app_name">Accounting System</string>
     <string name="month_out">Month Consumption</string>
-    <string name="out">支出</string>
+    <string name="out">outcome</string>
     <string name="month_in">Remaining Budget</string>
-    <string name="in">收入</string>
-    <string name="budget">预算剩余</string>
+    <string name="in">income</string>
+    <string name="budget">budget remaining</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="add_description">Description...</string>
+    <string name="cancel">Cancel</string>
+    <string name="enter">Enter</string>
 </resources>

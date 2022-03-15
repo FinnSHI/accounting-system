@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/accounting system/app/src/main/res/drawable/description_cancel_btn_bg.xml" value="0.169" />
         <entry key="..\:/accounting system/app/src/main/res/drawable/ic_launcher_background.xml" value="0.2925" />
         <entry key="..\:/accounting system/app/src/main/res/drawable/main_config_btn_bg.xml" value="0.2925" />
         <entry key="..\:/accounting system/app/src/main/res/drawable/main_configbtn_bg.xml" value="0.2925" />
@@ -13,6 +14,8 @@
         <entry key="..\:/accounting system/app/src/main/res/layout/fragment_consumption.xml" value="0.35989583333333336" />
         <entry key="..\:/accounting system/app/src/main/res/layout/item_main.xml" value="0.28854166666666664" />
         <entry key="..\:/accounting system/app/src/main/res/layout/item_main_top.xml" value="0.28396739130434784" />
+        <entry key="..\:/accounting system/app/src/main/res/layout/item_record_fragment.xml" value="0.31491228070175437" />
+        <entry key="..\:/accounting system/app/src/main/res/layout/item_record_fragment_desc.xml" value="0.3026315789473684" />
       </map>
     </option>
   </component>

@@ -41,7 +41,7 @@
         android:layout_height="match_parent"
         android:layout_below="@+id/main_top_layout"
         android:background="@color/grey_f3f3f3"
-        android:divider="null"
+        android:divider="@null"
         android:dividerHeight="6dp"
         android:padding="10dp"
         android:scrollbars="none">
@@ -52,6 +52,7 @@
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:src="@mipmap/more"
+        android:onClick="onClick"
         android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
         android:layout_margin="20dp"
@@ -65,5 +66,6 @@
         android:layout_toLeftOf="@id/main_config_btn"
         android:background="@drawable/main_record_btn_bg"
         android:drawableLeft="@mipmap/edit"
-        android:gravity="center_vertical" />
+        android:gravity="center_vertical"
+        android:onClick="onClick" />
 </RelativeLayout>
