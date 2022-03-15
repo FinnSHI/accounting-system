@@ -40,6 +40,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@+id/main_top_layout"
+        android:layout_marginTop="-1dp"
         android:background="@color/grey_f3f3f3"
         android:divider="@null"
         android:dividerHeight="6dp"
@@ -62,14 +63,14 @@
         android:onClick="onClick"
         android:src="@mipmap/more" />
 
-    <Button
+    <ImageButton
         android:id="@+id/main_record_btn"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_alignBottom="@id/main_config_btn"
         android:layout_toLeftOf="@id/main_config_btn"
         android:background="@drawable/main_record_btn_bg"
-        android:drawableLeft="@mipmap/edit"
+        android:src="@mipmap/edit"
         android:gravity="center_vertical"
         android:onClick="onClick" />
 </RelativeLayout>

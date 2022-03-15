@@ -104,6 +104,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     */
     private void initView() {
         todayListView = findViewById(R.id.main_list);
+        recordBtn = findViewById(R.id.main_record_btn);
         configBtn = findViewById(R.id.main_config_btn);
 
         /*
