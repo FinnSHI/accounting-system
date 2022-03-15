@@ -71,4 +71,102 @@ public class DBManager {
         db.insert("account_tb", null, values);
     }
 
+    /* 
+    * @Description: 获取某一天记账数据
+    * @Param:  
+    * @return:  
+    * @Author: Finn
+    * @Date: 2022/3/15 
+    */
+    @SuppressLint("Range")
+    public static List<Account> getAccountListAtOneDay(int year, int month, int day) {
+        List<Account>list = new ArrayList<>();
+        String sql = "select * from account_tb where year=? and month=? and day=? order by id desc";
+        Cursor cursor = db.rawQuery(sql, new String[]{
+                year + "", month + "", day + ""
+        });
+
+        while (cursor.moveToNext()) {
+      /*    int id;
+            String typeName;
+            int sImageId;
+            String description;
+            float money;
+            String time;
+            int year;
+            int month;
+            int day;
+            int kind;
+       */
+            System.out.println(cursor.getInt(cursor.getColumnIndex("id")));
+            @SuppressLint("Range") int id = cursor.getInt(cursor.getColumnIndex("id"));
+            @SuppressLint("Range") String typename = cursor.getString(cursor.getColumnIndex("typeName"));
+            @SuppressLint("Range") int sImageId = cursor.getInt(cursor.getColumnIndex("sImageId"));
+            @SuppressLint("Range") String description = cursor.getString(cursor.getColumnIndex("description"));
+            @SuppressLint("Range") float money = cursor.getFloat(cursor.getColumnIndex("money"));
+            @SuppressLint("Range") String time = cursor.getString(cursor.getColumnIndex("time"));
+            @SuppressLint("Range") int kind = cursor.getInt(cursor.getColumnIndex("kind"));
+            Account bean = new Account(id, typename, sImageId, description, money, time, year, month, day, kind);
+            list.add(bean);
+        }
+
+        return list;
+    }
+
+    /*
+    * @Description: 获取当年支持
+    * @Param: [year, kind]
+    * @return:
+    * @Author: Finn
+    * @Date: 2022/3/15
+    */
+    @SuppressLint("Range")
+    public static float getSumMoneyOneYear(int year, int kind){
+        float money = 0.0f;
+        String sql = "select sum(money) from account_tb where year=? and kind=?";
+        Cursor cursor = db.rawQuery(sql, new String[]{year + "", kind + ""});
+        // 遍历
+        if (cursor.moveToFirst()) {
+            money = cursor.getFloat(cursor.getColumnIndex("sum(money)"));
+        }
+        return money;
+    }
+
+    /*
+    * @Description: 获取某月的支出
+    * @Param: [year, month, kind]
+    * @return:
+    * @Author: Finn
+    * @Date: 2022/3/15
+    */
+    @SuppressLint("Range")
+    public static float getSumMoneyOneMonth(int year, int month, int kind){
+        float money = 0.0f;
+        String sql = "select sum(money) from account_tb where year=? and month=? and kind=?";
+        Cursor cursor = db.rawQuery(sql, new String[]{year + "", month + "", kind + ""});
+        // 遍历
+        if (cursor.moveToFirst()) {
+            money = cursor.getFloat(cursor.getColumnIndex("sum(money)"));
+        }
+        return money;
+    }
+
+    /*
+    * @Description: 获取当天的支出
+    * @Param: [year, month, day, kind]
+    * @return:
+    * @Author: Finn
+    * @Date: 2022/3/15
+    */
+    @SuppressLint("Range")
+    public static float getSumMoneyOneDay(int year, int month, int day, int kind){
+        float money = 0.0f;
+        String sql = "select sum(money) from account_tb where year=? and month=? and day=? and kind=?";
+        Cursor cursor = db.rawQuery(sql, new String[]{year + "", month + "", day + "", kind + ""});
+        // 遍历
+        if (cursor.moveToFirst()) {
+            money = cursor.getFloat(cursor.getColumnIndex("sum(money)"));
+        }
+        return money;
+    }
 }

@@ -32,7 +32,7 @@ public class AccountAdapter extends BaseAdapter {
         inflater = LayoutInflater.from(context);
         Calendar calendar = Calendar.getInstance();
         year = calendar.get(Calendar.YEAR);
-        month = calendar.get(Calendar.MONTH)+1;
+        month = calendar.get(Calendar.MONTH) + 1;
         day = calendar.get(Calendar.DAY_OF_MONTH);
     }
 
@@ -66,10 +66,10 @@ public class AccountAdapter extends BaseAdapter {
         holder.typeIv.setImageResource(bean.getsImageId());
         holder.typeTv.setText(bean.getTypeName());
         holder.descriptionTv.setText(bean.getDescription());
-        holder.moneyTv.setText("￥ "+bean.getMoney());
-        if (bean.getYear()==year&&bean.getMonth()==month&&bean.getDay()==day) {
+        holder.moneyTv.setText("HK$"+bean.getMoney());
+        if (bean.getYear() == year && bean.getMonth() == month && bean.getDay() == day) {
             String time = bean.getTime().split(" ")[1];
-            holder.timeTv.setText("今天 "+time);
+            holder.timeTv.setText("Today " + time);
         }else {
             holder.timeTv.setText(bean.getTime());
         }

@@ -10,7 +10,6 @@ import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Adapter;
 import android.widget.AdapterView;
 import android.widget.EditText;
 import android.widget.GridView;
@@ -20,10 +19,9 @@ import android.widget.TextView;
 import com.finn.accounting.R;
 import com.finn.accounting.adapter.TypeBaseAdapter;
 import com.finn.accounting.db.DBManager;
-import com.finn.accounting.db.MyDBOpenHelper;
 import com.finn.accounting.entity.Account;
 import com.finn.accounting.entity.Type;
-import com.finn.accounting.utils.DescriptionDialog;
+import com.finn.accounting.dialog.DescriptionDialog;
 import com.finn.accounting.utils.KeyboardUtils;
 
 import java.text.SimpleDateFormat;
@@ -143,9 +141,12 @@ public class ConsumptionFragment extends Fragment implements View.OnClickListene
         typeList = new ArrayList<>();
         typeBaseAdapter = new TypeBaseAdapter(getContext(), typeList);
         typeGridView.setAdapter(typeBaseAdapter);
-        List<Type> consumptionList = DBManager.getTypeList(0);
-        typeList.addAll(consumptionList);
+
+        List<Type> outlist = DBManager.getTypeList(0);
+        typeList.addAll(outlist);
         typeBaseAdapter.notifyDataSetChanged();
+        typeTextView.setText("其他");
+        typeImageView.setImageResource(R.mipmap.ic_qita_fs);
     }
 
     private void initView(View view) {
@@ -156,6 +157,8 @@ public class ConsumptionFragment extends Fragment implements View.OnClickListene
         descriptionTextView = view.findViewById(R.id.frag_record_description);
         timeTextView = view.findViewById(R.id.frag_record_time);
         typeGridView = view.findViewById(R.id.frag_record_content);
+        descriptionTextView.setOnClickListener(this);
+        timeTextView.setOnClickListener(this);
 
         KeyboardUtils keyboardUtils = new KeyboardUtils(keyboardView, moneyEditText);
         keyboardUtils.showKeyboard();
@@ -167,12 +170,19 @@ public class ConsumptionFragment extends Fragment implements View.OnClickListene
             } else {
                 float money = Float.parseFloat(m);
                 account.setMoney(money);
-
+                saveAccountToDB();
                 getActivity().finish();
             }
         });
     }
 
+    /*
+    * @Description: 保存到数据库
+    * @Param: []
+    * @return:
+    * @Author: Finn
+    * @Date: 2022/3/15
+    */
     public void saveAccountToDB() {
         account.setKind(0);
         DBManager.insertItemToAccountTb(account);

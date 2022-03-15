@@ -47,16 +47,20 @@
         android:scrollbars="none">
 
     </ListView>
+
     <ImageButton
         android:id="@+id/main_config_btn"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:src="@mipmap/more"
-        android:onClick="onClick"
         android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
-        android:layout_margin="20dp"
-        android:background="@drawable/main_config_btn_bg"/>
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/main_config_btn_bg"
+        android:onClick="onClick"
+        android:src="@mipmap/more" />
 
     <Button
         android:id="@+id/main_record_btn"

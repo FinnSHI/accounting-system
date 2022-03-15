@@ -1,4 +1,4 @@
-package com.finn.accounting.utils;
+package com.finn.accounting.dialog;
 
 import android.annotation.SuppressLint;
 import android.app.Dialog;
