@@ -52,7 +52,7 @@ public class MyDBOpenHelper extends SQLiteOpenHelper {
         sqLiteDatabase.execSQL(sql,new Object[]{"Food", R.mipmap.ic_canyin,R.mipmap.ic_canyin_fs,0});
         sqLiteDatabase.execSQL(sql,new Object[]{"Transport", R.mipmap.ic_jiaotong,R.mipmap.ic_jiaotong_fs,0});
         sqLiteDatabase.execSQL(sql,new Object[]{"Shopping", R.mipmap.ic_gouwu,R.mipmap.ic_gouwu_fs,0});
-        sqLiteDatabase.execSQL(sql,new Object[]{"Fruit", R.mipmap.ic_fushi,R.mipmap.ic_fushi_fs,0});
+        sqLiteDatabase.execSQL(sql,new Object[]{"Fruit", R.mipmap.ic_fushi_fs,R.mipmap.ic_fushi,0});
         sqLiteDatabase.execSQL(sql,new Object[]{"Network", R.mipmap.ic_tongxun,R.mipmap.ic_tongxun_fs,0});
         sqLiteDatabase.execSQL(sql,new Object[]{"Game", R.mipmap.ic_yule,R.mipmap.ic_yule_fs,0});
         sqLiteDatabase.execSQL(sql,new Object[]{"Rent", R.mipmap.ic_zhufang,R.mipmap.ic_zhufang_fs,0});
