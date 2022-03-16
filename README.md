@@ -12,7 +12,7 @@ language：java
 
 **Main page designs.** Adding all components into the main page, which are belonging to it. We can get the information of month consumption which will add all expenses in one month from the database. The budget can be set, and remaining budget is calculated with the budget and month consumption.
 
-![手机屏幕的截图  描述已自动生成](.\README.assets\clip_image002.jpg)
+![手机屏幕的截图  描述已自动生成](https://github.com/FinnSHI/accounting-system/blob/main/README.assets/clip_image002.jpg)
 
 **Set the budget.** Click the remaining budget, we can set the budget. And we can see it when click the *ENTER* button.
 
